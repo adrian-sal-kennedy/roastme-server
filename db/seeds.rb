@@ -34,3 +34,12 @@ end
 10.times do
     Tag.create(tag:Faker::Color.color_name)
 end
+
+# Give recipes tags and ingredients
+
+3.times do 
+    Recipe.all.each do |recipe|
+        recipe.recipes_ingredients.create(ingredient_id: rand(1..Ingredient.all.length))
+        recipe.recipes_tags.create(tag_id: rand(1..Tag.all.length))
+    end
+end
