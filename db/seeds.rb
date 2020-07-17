@@ -43,3 +43,9 @@ end
         recipe.recipes_tags.create(tag_id: rand(1..Tag.all.length))
     end
 end
+
+3.times do
+    User.all.each do |user|
+        user.posts.create(recipe_id: rand(1..Recipe.all.length), post:Faker::Games::Witcher.quote)
+    end
+end
