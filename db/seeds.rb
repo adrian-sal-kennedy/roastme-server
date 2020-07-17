@@ -28,3 +28,9 @@ end
 10.times do 
     Ingredient.create(name:Faker::Food.ingredient)
 end
+
+# Create tags
+
+10.times do
+    Tag.create(tag:Faker::Color.color_name)
+end
