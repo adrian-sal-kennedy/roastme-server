@@ -1,4 +1,4 @@
 class RecipesIngredient < ApplicationRecord
-  belongs_to :Recipe
-  belongs_to :Ingredient
+  belongs_to :recipe
+  belongs_to :ingredient
 end
