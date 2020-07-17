@@ -39,7 +39,7 @@ end
 
 3.times do 
     Recipe.all.each do |recipe|
-        recipe.recipes_ingredients.create(ingredient_id: rand(1..Ingredient.all.length))
+        recipe.recipes_ingredients.create(quantity: "1 cup", ingredient_id: rand(1..Ingredient.all.length))
         recipe.recipes_tags.create(tag_id: rand(1..Tag.all.length))
     end
 end
