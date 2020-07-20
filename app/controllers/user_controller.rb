@@ -6,12 +6,12 @@ class UserController < ApplicationController
   end
 
   def show
-    render json: {controller:"user", action:"show"}
+    render json: User.find(params[:id]).posts
     
   end
   private 
   
   def user_params 
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :username)
   end 
 end
