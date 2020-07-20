@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_20_081335) do
+ActiveRecord::Schema.define(version: 2020_07_20_051302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,13 +29,6 @@ ActiveRecord::Schema.define(version: 2020_07_20_081335) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["favourite_id"], name: "index_favourites_recipes_on_favourite_id"
     t.index ["recipe_id"], name: "index_favourites_recipes_on_recipe_id"
-  end
-
-  create_table "following", force: :cascade do |t|
-    t.bigint "followed_id"
-    t.bigint "following_id"
-    t.index ["followed_id"], name: "index_following_on_followed_id"
-    t.index ["following_id"], name: "index_following_on_following_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -110,8 +103,6 @@ ActiveRecord::Schema.define(version: 2020_07_20_081335) do
   add_foreign_key "favourites", "users"
   add_foreign_key "favourites_recipes", "favourites"
   add_foreign_key "favourites_recipes", "recipes"
-  add_foreign_key "following", "users", column: "followed_id"
-  add_foreign_key "following", "users", column: "following_id"
   add_foreign_key "posts", "recipes"
   add_foreign_key "posts", "users"
   add_foreign_key "recipes", "users"

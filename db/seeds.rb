@@ -5,11 +5,15 @@ User.create(username: "Guy", email:"admin@admin.com", password:"password")
     User.first.recipes.create(title:Faker::Food.dish, method: {step1: "cook it", step2: "eat"}.to_json, blog:Faker::Food.description)
 end
 
+pp "Created admin"
+
 # Create users
 
 20.times do
     User.create(username: Faker::Name.name, email: Faker::Internet.email, password: "password")
 end
+
+pp "Created users"
 
 # Create recipes
 
@@ -19,6 +23,8 @@ end
         Recipe.create(title:"recipe: #{i+j}", method: method.to_json, blog:"cool story", user_id: i+1)
     end
 end
+
+pp "Created recipes"
 
 # Create favourites
 
@@ -30,17 +36,23 @@ User.all.each do |user|
     end
 end
 
+pp "Created favourites"
+
 # Create ingredients
 
 20.times do 
     Ingredient.create(name:Faker::Food.ingredient)
 end
 
+pp "Created ingredients"
+
 # Create tags
 
 20.times do
     Tag.create(tag:Faker::Color.color_name)
 end
+
+pp "Created tags"
 
 # Give recipes tags and ingredients
 
@@ -51,6 +63,8 @@ end
     end
 end
 
+pp "Created link from tags/ingredients to recipes"
+
 # Create posts
 
 5.times do
@@ -59,8 +73,4 @@ end
     end
 end
 
-# Distribute followers
-
-User.all.each do |user| 
-    Following.create(followed_id)
-end
+pp "Created posts"
