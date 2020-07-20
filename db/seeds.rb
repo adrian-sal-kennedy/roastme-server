@@ -1,3 +1,10 @@
+# Specific user
+
+User.create(username: "Guy", email:"admin@admin.com", password:"password")
+10.times do 
+    User.first.recipes.create(title:Faker::Food.dish, method: {step1: "cook it", step2: "eat"}.to_json, blog:Faker::Food.description)
+end
+
 # Create users
 
 20.times do
@@ -50,4 +57,10 @@ end
     User.all.each do |user|
         user.posts.create(recipe_id: rand(1..Recipe.all.length), post:Faker::Games::Witcher.quote)
     end
+end
+
+# Distribute followers
+
+User.all.each do |user| 
+    Following.create(user)
 end
