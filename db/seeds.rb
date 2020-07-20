@@ -62,5 +62,5 @@ end
 # Distribute followers
 
 User.all.each do |user| 
-    Following.create(user)
+    Following.create(followed_id)
 end
