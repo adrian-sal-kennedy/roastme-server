@@ -25,8 +25,7 @@ Rails.application.routes.draw do
 
   # authentication
 
-  post '/login', to: "authentication#login"
-  post '/signup', to: "authentication#signup"
+  get '/login', to: "user_token#create"
 
   # posts
 

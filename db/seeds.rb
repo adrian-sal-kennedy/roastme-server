@@ -1,7 +1,7 @@
 # Create users
 
 10.times do
-    User.create(username: Faker::Name.name )
+    User.create(username: Faker::Name.name, email: Faker::Internet.email, password: "password")
 end
 
 # Create recipes
