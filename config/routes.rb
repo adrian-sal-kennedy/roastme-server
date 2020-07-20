@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   # authentication
 
   get '/login', to: "user_token#create"
+  post '/signup', to: "user#create"
 
   # posts
 
@@ -40,5 +41,10 @@ Rails.application.routes.draw do
   post '/recipe', to: "recipe#create"
   patch '/recipe/:id', to: "recipe#update"
   delete '/recipe/:id', to: "recipe#delete"
+
+  # status
+
+  get "/status", to: "status#index"
+  get "/status/user", to: "status#user"
 
 end
