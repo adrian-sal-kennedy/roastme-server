@@ -2,6 +2,7 @@ class StatusController < ApplicationController
     before_action :authenticate_user
   
     def index
+        pp current_user
       render json: { message: 'logged in' }
     end
   

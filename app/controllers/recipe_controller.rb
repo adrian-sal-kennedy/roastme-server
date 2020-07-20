@@ -1,4 +1,6 @@
 class RecipeController < ApplicationController
+  before_action :authenticate_user, except: :show
+
   def show
     render json: {controller:"recipe", action:"show"}
 
