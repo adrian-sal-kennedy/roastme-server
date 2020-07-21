@@ -9,9 +9,9 @@ class RecipeController < ApplicationController
     recipe = Recipe.find(params[:id])
     if (recipe.user == current_user)
       recipe.destroy
-      render json: {post: params[:id], deleted: true}
+      render json: {recipe: params[:id], deleted: true}
     else
-      render json: {post: params[:id], deleted: false, exception: exception}
+      render json: {recipe: params[:id], deleted: false, exception: exception}
     end
   end
 
@@ -22,15 +22,19 @@ class RecipeController < ApplicationController
 
     if recipe.user == current_user
       recipe.update(recipe_params)
-      render json: {post: params[:id], deleted: true}
+      render json: {recipe: params[:id], deleted: true}
     else
-      render json: {post: params[:id], deleted: false}
+      render json: {recipe: params[:id], deleted: false}
     end
   end
 
   def create
-    current_user.recipes.create(recipe_params)
-    render json: {post: 1, created: true}
+    new_recipe = current_user.recipes.new(recipe_params)
+    if new_recipe.save
+      render json: {recipe: new_recipe.id, created: true}
+    else
+      render json: {recipe: "n/a", created: false}
+    end
   end
   
   private
