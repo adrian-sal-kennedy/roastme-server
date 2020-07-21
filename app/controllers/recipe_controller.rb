@@ -15,23 +15,32 @@ class RecipeController < ApplicationController
     end
   end
 
+  # need to do ingredients and tags
+
   def update
-    if Recipe.find(params[:id]).user == current_user
-      
-      render json: {controller:"recipe", action:"update"}
+    recipe = Recipe.find(params[:id])
+
+    if recipe.user == current_user
+      recipe.update(recipe_params)
+      render json: {post: params[:id], deleted: true}
     else
-      render json: {error: true}
+      render json: {post: params[:id], deleted: false}
     end
   end
 
   def create
-    render json: {controller:"recipe", action:"create"}
+    current_user.recipes.create(recipe_params)
+    render json: {post: 1, created: true}
   end
   
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :blog, :method, :ingredients, :tags)
+    params.require(:recipe).permit(:title, :blog, :method)
+  end
+
+  def additional_params
+    params.require(:recipe).permit(:ingredients, :tags)
   end
 
 end
