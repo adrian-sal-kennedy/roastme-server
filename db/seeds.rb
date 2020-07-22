@@ -29,7 +29,7 @@ pp "Created recipes"
 # Create favourites
 
 User.all.each do |user| 
-    Favourite.create(user_id: user.id)
+    # Favourite.create(user_id: user.id)
 
     6.times do 
         user.favourite.favourites_recipes.create(recipe_id: rand(1..Recipe.all.length))
@@ -78,7 +78,7 @@ pp "Created posts"
 # Randomly assorting followers
 
 User.all.each do |user|
-    Following.create(user_id:user.id)
+    # Following.create(user_id:user.id)
     user.following.followings_users.create(user_id: rand(1..User.all.length))
 end
 
