@@ -2,7 +2,9 @@ class RecipeController < ApplicationController
   before_action :authenticate_user, except: :show
 
   def show
-    render json: Recipe.find(params[:id])
+    recipe = Recipe.find(params[:id])
+    
+    render json:  {recipe: recipe, ingredients: recipe.ingredients, tags: recipe.tags}
   end
 
   def delete

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_20_104651) do
+ActiveRecord::Schema.define(version: 2020_07_22_010356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,14 +48,13 @@ ActiveRecord::Schema.define(version: 2020_07_20_104651) do
   end
 
   create_table "ingredients", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "price"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "post"
+    t.string "post", null: false
     t.bigint "user_id", null: false
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -65,9 +64,9 @@ ActiveRecord::Schema.define(version: 2020_07_20_104651) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "title"
-    t.string "blog"
-    t.jsonb "method"
+    t.string "title", null: false
+    t.string "blog", null: false
+    t.jsonb "method", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -94,7 +93,7 @@ ActiveRecord::Schema.define(version: 2020_07_20_104651) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string "tag"
+    t.string "tag", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -109,11 +108,11 @@ ActiveRecord::Schema.define(version: 2020_07_20_104651) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "username", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
-    t.string "email"
+    t.string "password_digest", null: false
+    t.string "email", null: false
   end
 
   add_foreign_key "favourites", "users"
