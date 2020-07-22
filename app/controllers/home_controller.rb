@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-      render json: Recipe.all
+    # query = request.query_parameters
+    # page = query['page'] || 1
+
+    render json: Recipe.limit(10)
   end
 end

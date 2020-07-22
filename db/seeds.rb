@@ -81,3 +81,5 @@ User.all.each do |user|
     Following.create(user_id:user.id)
     user.following.followings_users.create(user_id: rand(1..User.all.length))
 end
+
+pp "assigned followers"
