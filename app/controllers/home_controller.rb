@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    render json: Recipe.all
+    recipes = []
+    Recipe.all.each do |recipe|
+      recipes << {recipe: recipe, author: recipe.user, tags: recipe.tags}
+    end
+    render json: recipes
   end
 end

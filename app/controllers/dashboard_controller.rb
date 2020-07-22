@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
     posts = []
     current_user.following.users.each do |user| 
       user.posts.each do |post|
-        posts << {post: post, tags: post.user}
+        posts << {post: post, author: post.user, recipe: post.recipe}
       end
     end
     render json: posts

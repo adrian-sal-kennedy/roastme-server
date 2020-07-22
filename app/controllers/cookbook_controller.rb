@@ -2,7 +2,11 @@ class CookbookController < ApplicationController
   before_action :authenticate_user
 
   def index
+    temp = []
     recipes = current_user.recipes + current_user.favourite.recipes
-    render json: {recipes: recipes, tags: recipes.tags}
+    recipes.each do |recipe|
+      temp << {recipe: recipe, author: recipe.user, tags: recipe.tags}
+    end
+    render json: temp
   end
 end
