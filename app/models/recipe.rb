@@ -1,4 +1,12 @@
 class Recipe < ApplicationRecord
+
+    # validations
+    validates :title, presence: true
+    validates :blog, presence: true
+    validates :method, presence: true
+
+    # associations
+
     belongs_to :user
 
     has_many :favourites_recipes, dependent: :delete_all
