@@ -4,7 +4,7 @@ class RecipeController < ApplicationController
   def show
     recipe = Recipe.find(params[:id])
     
-    render json:  {recipe: recipe, ingredients: recipe.ingredients, tags: recipe.tags}
+    render json:  {recipe: recipe, ingredients: recipe.ingredients, tags: recipe.tags, author: recipe.user}
   end
 
   def delete
