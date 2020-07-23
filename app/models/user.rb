@@ -1,11 +1,38 @@
 class User < ApplicationRecord
+    # callbacks
     has_secure_password
+    after_save :create_favourites
+    after_save :create_following
+
+    # validations
     validates :email, presence: true
+    validates :email, format: { with: /\A([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})\z/,
+        message: "Invalid email format" }
+    validates :email, uniqueness: true
 
+    validates :username, presence: true
+    validates :username, length: { in: 1..20} 
+    validates :username, uniqueness: true
+
+    validates :password, presence: true
+
+    # associations
     has_many :recipes
-    has_one :favourite
     has_many :posts
-
+    
+    has_one :favourite
     has_one :following
+
     has_many :followings_users
+
+    # private methods
+    private
+
+        def create_favourites
+            Favourite.create(user_id: self.id)
+        end
+
+        def create_following
+            Following.create(user_id: self.id)
+        end
 end

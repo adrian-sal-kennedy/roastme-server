@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
   def index
-    # query = request.query_parameters
-    # page = query['page'] || 1
-
-    render json: Recipe.limit(10)
+    recipes = []
+    Recipe.last(10).reverse.each do |recipe|
+      recipes << {recipe: recipe, author: recipe.user, tags: recipe.tags}
+    end
+    render json: recipes
   end
 end
