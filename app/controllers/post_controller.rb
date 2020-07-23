@@ -2,7 +2,8 @@ class PostController < ApplicationController
   before_action :authenticate_user, except: :show
 
   def show
-    render json: Post.find(params[:id])
+    post = Post.find(params[:id])
+    render json: {post: post, author: post.user, recipe: post.recipe}
   end
 
   def delete

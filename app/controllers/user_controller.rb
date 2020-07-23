@@ -11,7 +11,8 @@ class UserController < ApplicationController
   end
 
   def show
-    render json: User.find(params[:id]).posts
+    user = User.find(params[:id])
+    render json: {posts: user.posts, recipes: user.recipes}
     
   end
   private 
