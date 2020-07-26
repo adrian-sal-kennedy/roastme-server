@@ -19,4 +19,6 @@ class Recipe < ApplicationRecord
     has_many :ingredients, through: :recipes_ingredients
 
     has_many :posts, dependent: :delete_all
+
+    has_one_attached :picture
 end
