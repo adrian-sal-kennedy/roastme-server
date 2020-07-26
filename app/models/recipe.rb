@@ -20,5 +20,5 @@ class Recipe < ApplicationRecord
 
     has_many :posts, dependent: :delete_all
 
-    has_one_attached :picture
+    has_one_attached :image
 end

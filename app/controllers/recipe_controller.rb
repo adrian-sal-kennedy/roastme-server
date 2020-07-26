@@ -31,13 +31,12 @@ class RecipeController < ApplicationController
   end
 
   def create
-    pp params
-    # new_recipe = current_user.recipes.new(recipe_params)
-    # if new_recipe.save
-    #   render json: {recipe: new_recipe.id, created: true}
-    # else
-    #   render json: {recipe: "n/a", created: false}
-    # end
+    new_recipe = current_user.recipes.new(recipe_params)
+    if new_recipe.save
+      render json: {recipe: new_recipe.id, created: true}
+    else
+      render json: {recipe: "n/a", created: false}
+    end
     render json: {temp: "temp"}
   end
   
