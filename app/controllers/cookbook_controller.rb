@@ -5,7 +5,7 @@ class CookbookController < ApplicationController
     temp = []
     recipes = current_user.recipes + current_user.favourite.recipes
     recipes.each do |recipe|
-      temp << {recipe: recipe, author: recipe.user, tags: recipe.tags, image: url_for(recipe.image)}
+      temp << {recipe: recipe, author: recipe.user, tags: recipe.tags}
     end
     render json: temp
   end
