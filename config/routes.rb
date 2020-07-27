@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'ingredients/index'
   # test route/controller
 
   get '/test', to: "test#test"
@@ -47,4 +48,6 @@ Rails.application.routes.draw do
   get "/status", to: "status#index"
   get "/status/user", to: "status#user"
 
+  # ingredients (for populating autocomplete in react)
+  post "/ingredients", to: "ingredients#index"
 end
