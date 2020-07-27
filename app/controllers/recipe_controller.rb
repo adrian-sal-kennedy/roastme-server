@@ -37,7 +37,6 @@ class RecipeController < ApplicationController
     else
       render json: {recipe: "n/a", created: false}
     end
-    render json: {temp: "temp"}
   end
   
   private
