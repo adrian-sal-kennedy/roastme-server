@@ -1,8 +1,8 @@
 class UserController < ApplicationController
-  before_action :check_existing, only: :create
+
   def create
     User.create(user_params)
-    render json: "user created"
+    render json: "user created", status: 200
   end
 
   def show
@@ -11,7 +11,7 @@ class UserController < ApplicationController
     
   end
   private 
-
+  
   def user_params 
     params.require(:user).permit(:email, :password, :username)
   end 
