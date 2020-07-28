@@ -50,4 +50,18 @@ Rails.application.routes.draw do
 
   # ingredients (for populating autocomplete in react)
   post "/ingredients", to: "ingredients#index"
+
+  # follow
+  get "/follow/:id", to: "follow#follow"
+  delete "/follow/:id", to: "follow#unfollow"
+  get "/follow", to: "follow#list"
+  get "/following/:id", to: "follow#following?"
+
+  # favourite
+
+  get "/favourite/:id", to: "favourite#favourite"
+  delete "favourite/:id", to: "favourite#unfavourite"
+  get "/favourite", to: "favourite#list"
+  get "favourited/:id", to: "favourite#favourite?"
+
 end
