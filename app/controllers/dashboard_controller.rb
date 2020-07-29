@@ -8,6 +8,6 @@ class DashboardController < ApplicationController
         posts << {post: post, author: post.user, recipe: post.recipe}
       end
     end
-    render json: posts
+    render json: {list: posts, count: posts.length}
   end
 end
