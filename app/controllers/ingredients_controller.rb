@@ -14,6 +14,10 @@ class IngredientsController < ApplicationController
 
 
     if current_user.id == recipe.user.id
+      recipe.recipes_ingredients.each do |link|
+        link.delete
+      end
+
       params.require(:ingredients).permit(:list)[:list].split(",").each do |name|
         ingredient = Ingredient.find_by_name(name)
 
