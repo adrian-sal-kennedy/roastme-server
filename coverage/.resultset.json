@@ -3,6 +3,8 @@
     "coverage": {
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/cookbook_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -21,26 +23,11 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          1,
           null,
           null,
           1,
-          0,
-          null,
-          null,
           1,
-          0,
           null,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          null,
-          1,
           null,
           1,
           0,
@@ -50,18 +37,33 @@
           0,
           null,
           null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ],
         "branches": {
-          "[:if, 0, 13, 6, 15, 9]": {
-            "[:then, 1, 14, 8, 14, 47]": 0,
-            "[:else, 2, 13, 6, 15, 9]": 0
+          "[:if, 0, 15, 4, 15, 84]": {
+            "[:then, 1, 15, 4, 15, 43]": 0,
+            "[:else, 2, 15, 4, 15, 84]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/dashboard_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -81,6 +83,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/favourite_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -141,26 +145,28 @@
           null
         ],
         "branches": {
-          "[:if, 0, 21, 12, 25, 15]": {
-            "[:then, 1, 22, 16, 22, 94]": 0,
-            "[:else, 2, 24, 16, 24, 95]": 0
+          "[:if, 0, 23, 6, 27, 9]": {
+            "[:then, 1, 24, 8, 24, 88]": 0,
+            "[:else, 2, 26, 8, 26, 89]": 0
           },
-          "[:if, 3, 19, 8, 28, 11]": {
-            "[:then, 4, 20, 12, 25, 15]": 0,
-            "[:else, 5, 27, 12, 27, 105]": 0
+          "[:if, 3, 21, 4, 30, 7]": {
+            "[:then, 4, 22, 6, 27, 9]": 0,
+            "[:else, 5, 29, 6, 29, 101]": 0
           },
-          "[:if, 6, 39, 8, 43, 11]": {
-            "[:then, 7, 40, 12, 40, 92]": 0,
-            "[:else, 8, 42, 12, 42, 93]": 0
+          "[:if, 6, 41, 4, 45, 7]": {
+            "[:then, 7, 42, 6, 42, 88]": 0,
+            "[:else, 8, 44, 6, 44, 89]": 0
           },
-          "[:if, 9, 52, 8, 56, 11]": {
-            "[:then, 10, 53, 12, 53, 90]": 0,
-            "[:else, 11, 55, 12, 55, 91]": 0
+          "[:if, 9, 54, 4, 58, 7]": {
+            "[:then, 10, 55, 6, 55, 86]": 0,
+            "[:else, 11, 57, 6, 57, 87]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/follow_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -221,28 +227,27 @@
           null
         ],
         "branches": {
-          "[:if, 0, 21, 12, 25, 15]": {
-            "[:then, 1, 22, 16, 22, 92]": 0,
-            "[:else, 2, 24, 16, 24, 93]": 0
+          "[:if, 0, 23, 6, 27, 9]": {
+            "[:then, 1, 24, 8, 24, 86]": 0,
+            "[:else, 2, 26, 8, 26, 87]": 0
           },
-          "[:if, 3, 19, 8, 28, 11]": {
-            "[:then, 4, 20, 12, 25, 15]": 0,
-            "[:else, 5, 27, 12, 27, 103]": 0
+          "[:if, 3, 21, 4, 30, 7]": {
+            "[:then, 4, 22, 6, 27, 9]": 0,
+            "[:else, 5, 29, 6, 29, 99]": 0
           },
-          "[:if, 6, 39, 8, 43, 11]": {
-            "[:then, 7, 40, 12, 40, 90]": 0,
-            "[:else, 8, 42, 12, 42, 91]": 0
+          "[:if, 6, 41, 4, 45, 7]": {
+            "[:then, 7, 42, 6, 42, 86]": 0,
+            "[:else, 8, 44, 6, 44, 87]": 0
           },
-          "[:if, 9, 52, 8, 56, 11]": {
-            "[:then, 10, 53, 12, 53, 88]": 0,
-            "[:else, 11, 55, 12, 55, 89]": 0
+          "[:if, 9, 54, 4, 58, 7]": {
+            "[:then, 10, 55, 6, 55, 84]": 0,
+            "[:else, 11, 57, 6, 57, 85]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/home_controller.rb": {
         "lines": [
           1,
-          null,
           1,
           0,
           0,
@@ -259,16 +264,18 @@
           0,
           null,
           0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
           0,
           null,
           0,
           null,
           0,
           null,
-          0,
-          null,
-          0,
-          null,
           null,
           null,
           0,
@@ -279,81 +286,69 @@
           null,
           null,
           0,
-          null,
           null,
           null
         ],
         "branches": {
-          "[:if, 0, 14, 4, 14, 93]": {
-            "[:then, 1, 14, 4, 14, 75]": 0,
-            "[:else, 2, 14, 4, 14, 93]": 0
+          "[:if, 0, 13, 4, 13, 93]": {
+            "[:then, 1, 13, 4, 13, 75]": 0,
+            "[:else, 2, 13, 4, 13, 93]": 0
           },
-          "[:if, 3, 15, 4, 15, 122]": {
-            "[:then, 4, 15, 4, 15, 97]": 0,
-            "[:else, 5, 15, 4, 15, 122]": 0
+          "[:if, 3, 14, 4, 16, 7]": {
+            "[:then, 4, 15, 6, 15, 99]": 0,
+            "[:else, 5, 14, 4, 16, 7]": 0
           },
-          "[:if, 6, 16, 4, 16, 90]": {
-            "[:then, 7, 16, 4, 16, 69]": 0,
-            "[:else, 8, 16, 4, 16, 90]": 0
+          "[:if, 6, 17, 4, 17, 90]": {
+            "[:then, 7, 17, 4, 17, 69]": 0,
+            "[:else, 8, 17, 4, 17, 90]": 0
           },
-          "[:case, 9, 19, 6, 28, 9]": {
-            "[:when, 10, 21, 8, 21, 50]": 0,
-            "[:when, 11, 23, 8, 23, 49]": 0,
-            "[:when, 12, 25, 8, 25, 44]": 0,
-            "[:when, 13, 27, 8, 27, 45]": 0,
-            "[:else, 14, 19, 6, 28, 9]": 0
+          "[:case, 9, 20, 6, 29, 9]": {
+            "[:when, 10, 22, 8, 22, 50]": 0,
+            "[:when, 11, 24, 8, 24, 49]": 0,
+            "[:when, 12, 26, 8, 26, 44]": 0,
+            "[:when, 13, 28, 8, 28, 45]": 0,
+            "[:else, 14, 20, 6, 29, 9]": 0
           },
-          "[:if, 15, 18, 4, 29, 7]": {
-            "[:then, 16, 19, 6, 28, 9]": 0,
-            "[:else, 17, 18, 4, 29, 7]": 0
+          "[:if, 15, 19, 4, 30, 7]": {
+            "[:then, 16, 20, 6, 29, 9]": 0,
+            "[:else, 17, 19, 4, 30, 7]": 0
           },
-          "[:if, 18, 31, 4, 31, 65]": {
-            "[:then, 19, 31, 4, 31, 45]": 0,
-            "[:else, 20, 31, 4, 31, 65]": 0
+          "[:if, 18, 32, 4, 32, 65]": {
+            "[:then, 19, 32, 4, 32, 45]": 0,
+            "[:else, 20, 32, 4, 32, 65]": 0
           },
-          "[:if, 21, 32, 4, 32, 68]": {
-            "[:then, 22, 32, 4, 32, 47]": 0,
-            "[:else, 23, 32, 4, 32, 68]": 0
+          "[:if, 21, 33, 4, 33, 68]": {
+            "[:then, 22, 33, 4, 33, 47]": 0,
+            "[:else, 23, 33, 4, 33, 68]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/ingredients_controller.rb": {
         "lines": [
-          1,
-          1,
+          null,
           null,
           1,
-          0,
-          0,
-          null,
+          1,
           null,
           1,
           0,
           0,
-          0,
-          0,
           null,
           null,
+          1,
           0,
           0,
           0,
-          null,
           null,
           0,
           0,
           null,
           0,
           0,
-          0,
-          null,
           null,
           0,
           0,
           0,
-          null,
-          null,
-          0,
-          null,
           null,
           null,
           null,
@@ -361,45 +356,31 @@
           0,
           null,
           0,
-          null,
-          null,
           null,
           null,
           null
         ],
         "branches": {
-          "[:if, 0, 24, 8, 32, 11]": {
-            "[:then, 1, 25, 10, 26, 20]": 0,
-            "[:else, 2, 29, 10, 31, 20]": 0
+          "[:if, 0, 16, 4, 26, 7]": {
+            "[:then, 1, 17, 6, 25, 9]": 0,
+            "[:else, 2, 16, 4, 26, 7]": 0
           },
-          "[:if, 3, 16, 4, 37, 7]": {
-            "[:then, 4, 17, 6, 36, 9]": 0,
-            "[:else, 5, 16, 4, 37, 7]": 0
-          },
-          "[:if, 6, 39, 4, 43, 7]": {
-            "[:then, 7, 40, 6, 40, 65]": 0,
-            "[:else, 8, 42, 6, 42, 53]": 0
+          "[:if, 3, 28, 4, 32, 7]": {
+            "[:then, 4, 29, 6, 29, 67]": 0,
+            "[:else, 5, 31, 6, 31, 55]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/post_controller.rb": {
         "lines": [
-          1,
-          1,
+          null,
           null,
           1,
-          0,
-          0,
-          null,
+          1,
           null,
           1,
           0,
           0,
-          0,
-          0,
-          null,
-          0,
-          null,
           null,
           null,
           1,
@@ -410,6 +391,15 @@
           null,
           0,
           null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           null,
           null,
           null,
@@ -430,22 +420,24 @@
           null
         ],
         "branches": {
-          "[:if, 0, 11, 4, 16, 7]": {
-            "[:then, 1, 12, 6, 13, 53]": 0,
-            "[:else, 2, 15, 6, 15, 54]": 0
+          "[:if, 0, 13, 4, 18, 7]": {
+            "[:then, 1, 14, 6, 15, 55]": 0,
+            "[:else, 2, 17, 6, 17, 56]": 0
           },
-          "[:if, 3, 21, 4, 26, 7]": {
-            "[:then, 4, 22, 6, 23, 53]": 0,
-            "[:else, 5, 25, 6, 25, 54]": 0
+          "[:if, 3, 23, 4, 28, 7]": {
+            "[:then, 4, 24, 6, 25, 55]": 0,
+            "[:else, 5, 27, 6, 27, 56]": 0
           },
-          "[:if, 6, 32, 4, 36, 7]": {
-            "[:then, 7, 33, 6, 33, 52]": 0,
-            "[:else, 8, 35, 6, 35, 48]": 0
+          "[:if, 6, 33, 4, 37, 7]": {
+            "[:then, 7, 34, 6, 34, 55]": 0,
+            "[:else, 8, 36, 6, 36, 50]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/profile_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -459,39 +451,32 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/recipe_controller.rb": {
         "lines": [
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           1,
           0,
           null,
           0,
+          null,
+          null,
+          1,
+          0,
+          0,
           0,
           0,
           null,
           0,
+          null,
+          null,
           null,
           null,
           null,
           1,
+          0,
+          null,
           0,
           0,
           0,
@@ -501,6 +486,15 @@
           null,
           null,
           1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
           null,
           1,
           0,
@@ -508,27 +502,28 @@
           null,
           1,
           0,
-          null,
           null,
           null
         ],
         "branches": {
-          "[:if, 0, 12, 4, 17, 7]": {
-            "[:then, 1, 13, 6, 14, 55]": 0,
-            "[:else, 2, 16, 6, 16, 78]": 0
+          "[:if, 0, 14, 4, 19, 7]": {
+            "[:then, 1, 15, 6, 16, 57]": 0,
+            "[:else, 2, 18, 6, 18, 80]": 0
           },
-          "[:if, 3, 25, 4, 30, 7]": {
-            "[:then, 4, 26, 6, 27, 55]": 0,
-            "[:else, 5, 29, 6, 29, 56]": 0
+          "[:if, 3, 27, 4, 32, 7]": {
+            "[:then, 4, 28, 6, 29, 57]": 0,
+            "[:else, 5, 31, 6, 31, 58]": 0
           },
-          "[:if, 6, 35, 4, 39, 7]": {
-            "[:then, 7, 36, 6, 36, 57]": 0,
-            "[:else, 8, 38, 6, 38, 50]": 0
+          "[:if, 6, 37, 4, 41, 7]": {
+            "[:then, 7, 38, 6, 38, 59]": 0,
+            "[:else, 8, 40, 6, 40, 52]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/status_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -546,41 +541,30 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/tags_controller.rb": {
         "lines": [
-          1,
-          1,
+          null,
           null,
           1,
-          0,
-          0,
-          null,
+          1,
           null,
           1,
           0,
           0,
-          0,
-          0,
           null,
           null,
+          1,
           0,
           0,
           0,
-          null,
           null,
           0,
           0,
           null,
           0,
           0,
-          0,
-          null,
           null,
           0,
           0,
           0,
-          null,
-          null,
-          0,
-          null,
           null,
           null,
           null,
@@ -588,30 +572,25 @@
           0,
           null,
           0,
-          null,
-          null,
-          null,
           null,
           null,
           null
         ],
         "branches": {
-          "[:if, 0, 24, 10, 32, 13]": {
-            "[:then, 1, 25, 12, 26, 22]": 0,
-            "[:else, 2, 29, 12, 31, 22]": 0
+          "[:if, 0, 16, 4, 26, 7]": {
+            "[:then, 1, 17, 6, 25, 9]": 0,
+            "[:else, 2, 16, 4, 26, 7]": 0
           },
-          "[:if, 3, 16, 6, 37, 9]": {
-            "[:then, 4, 17, 8, 36, 11]": 0,
-            "[:else, 5, 16, 6, 37, 9]": 0
-          },
-          "[:if, 6, 39, 6, 43, 9]": {
-            "[:then, 7, 40, 8, 40, 53]": 0,
-            "[:else, 8, 42, 8, 42, 55]": 0
+          "[:if, 3, 28, 4, 32, 7]": {
+            "[:then, 4, 29, 6, 29, 53]": 0,
+            "[:else, 5, 31, 6, 31, 55]": 0
           }
         }
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/user_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -636,6 +615,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/user_token_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           null
         ],
@@ -644,6 +625,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/favourite.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -655,6 +638,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/application_record.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null
@@ -664,6 +649,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/favourites_recipe.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -674,6 +661,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/following.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -685,6 +674,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/followings_user.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -695,6 +686,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/ingredient.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -711,7 +704,6 @@
         "lines": [
           1,
           null,
-          null,
           1,
           null,
           null,
@@ -725,7 +717,6 @@
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/recipe.rb": {
         "lines": [
           1,
-          null,
           null,
           1,
           1,
@@ -756,6 +747,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/recipes_ingredient.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -766,6 +759,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/recipes_tag.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -777,7 +772,6 @@
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/tag.rb": {
         "lines": [
           1,
-          null,
           null,
           1,
           1,
@@ -794,6 +788,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/models/user.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -836,6 +832,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/jobs/application_job.rb": {
         "lines": [
+          null,
+          null,
           0,
           null,
           null,
@@ -849,6 +847,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/channels/application_cable/connection.rb": {
         "lines": [
+          null,
+          null,
           0,
           0,
           0,
@@ -859,6 +859,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/channels/application_cable/channel.rb": {
         "lines": [
+          null,
+          null,
           0,
           0,
           0,
@@ -869,34 +871,8 @@
       },
       "/home/guy/Desktop/final_assignment/roastme-server/app/mailers/application_mailer.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/guy/Desktop/final_assignment/roastme-server/app/controllers/test_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
           0,
           0,
           0,
@@ -906,6 +882,6 @@
         }
       }
     },
-    "timestamp": 1596042938
+    "timestamp": 1596044566
   }
 }
