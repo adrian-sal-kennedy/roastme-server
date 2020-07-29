@@ -56,3 +56,9 @@ jobs:
           bundler exec rails db:migrate
       - name: Run RSpec Tests
         run: bundler exec rspec
+      - name: Upload coverage results    
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+          name: simplecov-report
+          path: coverage
