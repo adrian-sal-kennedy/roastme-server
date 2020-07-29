@@ -20,7 +20,7 @@ class Recipe < ApplicationRecord
     has_many :recipes_ingredients, dependent: :delete_all
     has_many :ingredients, through: :recipes_ingredients
 
-    has_many :posts, dependent: :delete_all
+    has_many :posts
 
     has_one_attached :image
 end

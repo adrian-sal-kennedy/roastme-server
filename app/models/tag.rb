@@ -7,6 +7,6 @@ class Tag < ApplicationRecord
     validates :tag, length: { in: 1..20} 
 
     # associations
-    has_many :recipes_tags
+    has_many :recipes_tags, dependent: :delete_all
     has_many :recipes, through: :recipes_tags
 end

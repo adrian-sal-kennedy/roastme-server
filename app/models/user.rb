@@ -17,11 +17,11 @@ class User < ApplicationRecord
     validates :password, presence: true
 
     # associations
-    has_many :recipes
-    has_many :posts
+    has_many :recipes, dependent: :delete_all
+    has_many :posts, dependent: :delete_all
     
-    has_one :favourite
-    has_one :following
+    has_one :favourite, dependent: :destroy
+    has_one :following, dependent: :destroy
 
     # private methods
     private
