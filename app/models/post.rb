@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-
   # validations
   validates :post, presence: true
 

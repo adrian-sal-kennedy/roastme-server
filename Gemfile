@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'simplecov', require: false
 end
 
 group :development do
@@ -46,3 +47,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "faker", "~> 2.13"
 gem 'knock', git: 'https://github.com/nsarno/knock', branch: 'master', ref: '9214cd027422df8dc31eb67c60032fbbf8fc100b'
 gem "aws-sdk-s3", "~> 1.75"
+
+gem "rubocop-rails", "~> 2.7"

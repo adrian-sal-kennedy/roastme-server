@@ -3,9 +3,9 @@ class DashboardController < ApplicationController
 
   def index
     posts = []
-    current_user.following.users.each do |user| 
+    current_user.following.users.each do |user|
       user.posts.each do |post|
-        posts << {post: post, author: post.user, recipe: post.recipe}
+        posts << { post: post, author: post.user, recipe: post.recipe }
       end
     end
     render json: posts
