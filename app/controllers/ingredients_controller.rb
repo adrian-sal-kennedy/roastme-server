@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-  before_action :authenticate_user, except: :index
+  before_action :authenticate_user, except: :list
 
   def list
     list = Ingredient.order(name: :asc).pluck(:name)
