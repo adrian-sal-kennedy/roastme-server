@@ -1,5 +1,5 @@
 class UserController < ApplicationController
-  before_action :check_existing, only: :create
+  # before_action :check_existing, only: :create
   def create
     User.create(user_params)
     render json: "user created"
