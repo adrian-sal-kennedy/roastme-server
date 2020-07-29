@@ -2,12 +2,16 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   subject {
-    build :tag
+    build :post
   }
 
   context "validations" do
-    it "should validate presence of tag" do
-      expect(subject).to validate_presence_of(:tag)
+    it "should be valid with valid attributes" do
+
+    end
+
+    it "should validate presence of post" do
+      expect(subject).to validate_presence_of(:post)
     end
   end
 
