@@ -18,7 +18,8 @@ class IngredientsController < ApplicationController
         link.delete
       end
 
-      params.require(:ingredients).permit(:list)[:list].split(",").each do |name|
+      # params.require(:ingredients).permit(:list)[:list].split(",").each do |name|
+      params.require(:ingredients).permit(:list).each do |name|
         ingredient = Ingredient.find_by_name(name)
 
         if ingredient
