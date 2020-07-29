@@ -23,8 +23,6 @@ class User < ApplicationRecord
     has_one :favourite
     has_one :following
 
-    has_many :followings_users
-
     # private methods
     private
 
