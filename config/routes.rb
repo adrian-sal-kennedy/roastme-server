@@ -49,7 +49,8 @@ Rails.application.routes.draw do
   get "/status/user", to: "status#user"
 
   # ingredients (for populating autocomplete in react)
-  post "/ingredients", to: "ingredients#index"
+  get "/ingredients", to: "ingredients#list"
+  post "ingredients/:id", to: "ingredients#create"
 
   # follow
   get "/follow/:id", to: "follow#follow"
@@ -63,5 +64,6 @@ Rails.application.routes.draw do
   delete "favourite/:id", to: "favourite#unfavourite"
   get "/favourite", to: "favourite#list"
   get "favourited/:id", to: "favourite#favourite?"
+
 
 end
