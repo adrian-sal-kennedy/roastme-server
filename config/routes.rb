@@ -52,6 +52,11 @@ Rails.application.routes.draw do
   get "/ingredients", to: "ingredients#list"
   post "ingredients/:id", to: "ingredients#create"
 
+  # tags
+  get "/tags", to: "tags#list"
+  post "tags/:id", to: "tags#create"
+
+
   # follow
   get "/follow/:id", to: "follow#follow"
   delete "/follow/:id", to: "follow#unfollow"
