@@ -9,7 +9,6 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    ingredients = Ingredient.order(name: :asc).pluck(:name)
     recipe = Recipe.find(params[:id])
     count = 0
     added_ingredients = []
@@ -18,23 +17,15 @@ class IngredientsController < ApplicationController
       recipe.recipes_ingredients.each(&:delete)
 
       params.require(:ingredients).permit(:list)[:list].split(',').each do |name|
-        ingredient = Ingredient.find_by_name(name)
+        ingredient = Ingredient.find_by(name: name) || Ingredient.create(name: name)
 
-        if ingredient
-          recipe.recipes_ingredients.create(ingredient_id: ingredient.id)
-          count += 1
-
-        else
-          ingredient = Ingredient.create(name: name)
-          recipe.recipes_ingredients.create(ingredient_id: ingredient.id)
-          count += 1
-        end
-
+        recipe.recipes_ingredients.create(ingredient_id: ingredient.id)
+        count += 1
         added_ingredients << ingredient
       end
     end
 
-    if count > 0
+    if count.positive?
       render json: { total: count, ingredients: added_ingredients }
     else
       render json: { total: count, unsuccessful: true }

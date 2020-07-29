@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Tag < ApplicationRecord
   # validations
   validates :tag, presence: true
