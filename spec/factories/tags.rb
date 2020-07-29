@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :tag do
-    tag { "funny tag" }
+    tag { "funnytag" }
   end
 end
