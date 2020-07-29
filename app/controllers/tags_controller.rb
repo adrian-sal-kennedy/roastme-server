@@ -1,5 +1,5 @@
 class TagsController < ApplicationController
-  before_action :authenticate_user, except: :index
+  before_action :authenticate_user, except: :list
 
   def list
     list = Tag.order(tag: :asc).pluck(:tag)
@@ -7,7 +7,6 @@ class TagsController < ApplicationController
   end
 
   def create
-    tags = Tag.order(tag: :asc).pluck(:tag)
     recipe = Recipe.find(params[:id])
     count = 0
     added_tags = []
@@ -16,26 +15,18 @@ class TagsController < ApplicationController
       recipe.recipes_tags.each(&:delete)
 
       params.require(:tags).permit(:list)[:list].split(',').each do |tag|
-        tag = Tag.find_by(tag: tag)
+        tag = Tag.find_by(tag: tag) || Tag.create(tag: tag)
 
-        if tag
-          recipe.recipes_tags.create(tag_id: tag.id)
-          count += 1
-
-        else
-          tag = Tag.create(tag: tag)
-          recipe.recipes_tags.create(tag_id: tag.id)
-          count += 1
-        end
-
+        recipe.recipes_tags.create(tag_id: tag.id)
+        count += 1
         added_tags << tag
       end
     end
 
-    if count > 0
+    if count.positive?
       render json: { total: count, tags: added_tags }
     else
       render json: { total: count, unsuccessful: true }
     end
   end
-  end
+end

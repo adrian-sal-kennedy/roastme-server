@@ -8,4 +8,4 @@ class StatusController < ApplicationController
   def user
     render json: { user: current_user.email }
   end
-  end
+end

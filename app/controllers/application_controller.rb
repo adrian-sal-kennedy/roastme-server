@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
     super(options, extra_options, &block)
   end
 
-    private
+  private
 
   def json_response?(options)
     options[:json].is_a?(Hash)
@@ -24,4 +24,4 @@ class ApplicationController < ActionController::API
   def logged_in?
     current_user.present?
   end
-  end
+end
