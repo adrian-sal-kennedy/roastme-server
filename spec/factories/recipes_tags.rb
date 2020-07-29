@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :recipes_tag do
-    recipe { nil }
-    tag { nil }
+    association :recipe, factory: :tag
+    association :tag, factory: :tag
   end
 end

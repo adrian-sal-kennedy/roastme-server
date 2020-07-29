@@ -35,7 +35,7 @@ class HomeController < ApplicationController
       list << {recipe: recipe, author: recipe.user, tags: recipe.tags}
     end
 
-    render json: list  
+    render json: {list: list, count: recipes.length}
   end
 
 end

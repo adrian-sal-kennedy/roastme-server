@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :favourites_recipe do
-    favourite { nil }
-    recipe { nil }
+    association :favourite, factory: :favourite
+    association :recipe, factory: :recipe
   end
 end

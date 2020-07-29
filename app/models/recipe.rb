@@ -2,6 +2,8 @@ class Recipe < ApplicationRecord
 
     # validations
     validates :title, presence: true
+    validates :title, length: { in: 1..30} 
+
     validates :blog, presence: true
     validates :method, presence: true
 
