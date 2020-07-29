@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CookbookController < ApplicationController
   before_action :authenticate_user
 
@@ -5,8 +7,8 @@ class CookbookController < ApplicationController
     temp = []
     recipes = current_user.recipes + current_user.favourite.recipes
     recipes.each do |recipe|
-      temp << {recipe: recipe, author: recipe.user, tags: recipe.tags}
+      temp << { recipe: recipe, author: recipe.user, tags: recipe.tags }
     end
-    render json: {list: temp, count: temp.length}
+    render json: { list: temp, count: temp.length }
   end
 end

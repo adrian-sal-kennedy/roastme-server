@@ -1,5 +1,6 @@
-class Post < ApplicationRecord
+# frozen_string_literal: true
 
+class Post < ApplicationRecord
   # validations
   validates :post, presence: true
 
