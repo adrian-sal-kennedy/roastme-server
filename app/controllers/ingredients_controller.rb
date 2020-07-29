@@ -34,7 +34,7 @@ class IngredientsController < ApplicationController
     end
 
     if count > 0
-      render json: { total: count, ingredients: added_ingredients, recipe_id: recipe }
+      render json: { total: count, ingredients: added_ingredients }
     else
       render json: { total: count, unsuccessful: true }
     end
