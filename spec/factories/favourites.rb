@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :favourite do
-    references { "" }
+    association :user, factory: :user
   end
 end

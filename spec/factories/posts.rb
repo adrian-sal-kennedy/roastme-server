@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
-    post { "MyString" }
-    user { nil }
-    recipe { nil }
+    post { "Cool post aha" }
+    association :user, factory: :user
+    association :recipe, factory: :user
   end
 end
