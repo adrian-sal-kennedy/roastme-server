@@ -8,51 +8,62 @@ RSpec.describe User, type: :model do
   context "validations" do
 
     it "should be valid with valid attributes" do
-      expect(subject).to be_valid
+      should be_valid
     end
 
     it "validates presence of username" do
-      expect(subject).to validate_presence_of(:username)
+      should validate_presence_of(:username)
     end
 
     it "validates presence of email" do
-      expect(subject).to validate_presence_of(:email)
+      should validate_presence_of(:email)
     end
 
     it "validates presence of password" do
-      expect(subject).to validate_presence_of(:password).ignoring_interference_by_writer
-    end
-
-    it "should be invalid with an invalid email format" do
-      subject.email = "invalid email"
-      expect(subject).to_not be_valid
+      should validate_presence_of(:password).ignoring_interference_by_writer
     end
 
     it "should have a username that is less than or eql to 20 characters" do
-      expect(subject).to validate_length_of(:username).is_at_most(20)
+      should validate_length_of(:username).is_at_most(20)
     end
 
     it "should have a username that is more than or eql to 1 character" do
-      expect(subject).to validate_length_of(:username).is_at_least(1)
+      should validate_length_of(:username).is_at_least(1)
+    end
+
+    it "should validate uniqueness of email" do
+      should validate_uniqueness_of(:email)
+    end
+
+    it "should validate uniqueness of username" do
+      should validate_uniqueness_of(:username)
+    end
+
+    it "should allow valid emails" do
+      should allow_value("email@address.com").for(:email)
+    end
+
+    it "should not allow invalid email addresses" do
+      should_not allow_value("invalid.format").for(:email)
     end
   end
 
   context "associations" do
 
     it "has many recipes" do
-      expect(subject).to have_many(:recipes) 
+      should have_many(:recipes).dependent(:delete_all)
     end
 
     it "has many posts" do
-      expect(subject).to have_many(:posts) 
+      should have_many(:posts).dependent(:delete_all)
     end
 
     it "has one following table" do
-      expect(subject).to have_one(:following)
+      should have_one(:following).dependent(:destroy)
     end
 
     it "has on favourite table" do
-      expect(subject).to have_one(:favourite)
+      should have_one(:favourite).dependent(:destroy)
     end
   end
 end
