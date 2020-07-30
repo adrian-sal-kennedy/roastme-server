@@ -19,7 +19,7 @@ class FavouriteController < ApplicationController
       skip = true
     end
     if skip == false
-      new_favourite = current_user.favroute.favourites_recipes.new(recipe_id: params[:id])
+      new_favourite = current_user.favourite.favourites_recipes.new(recipe_id: params[:id])
       if new_favourite.save
         render json: { user: current_user.id, favourite: params[:id], favourited: true }
       else
