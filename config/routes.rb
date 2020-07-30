@@ -45,6 +45,10 @@ Rails.application.routes.draw do
   patch '/recipe/:id', to: 'recipe#update'
   delete '/recipe/:id', to: 'recipe#delete'
 
+  # image
+
+  get '/image/:id', to: 'recipe#image'
+
   # status
 
   get '/status', to: 'status#index'

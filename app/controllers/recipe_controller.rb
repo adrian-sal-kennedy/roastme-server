@@ -3,6 +3,15 @@
 class RecipeController < ApplicationController
   before_action :authenticate_user, except: :show
 
+  def image
+    recipe = Recipe.find(params[:id])
+    if recipe.image.attached?
+      render json: { image: url_for(recipe.image) }
+    else
+      render json: { image: false }
+    end
+  end
+
   def show
     recipe = Recipe.find(params[:id])
 
