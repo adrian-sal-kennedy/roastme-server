@@ -8,8 +8,11 @@ class UserController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
-    render json: { posts: user.posts, recipes: user.recipes }
+    posts = []
+    User.find(params[:id]).posts.each do |post|
+      posts << { post: post, author: post.user, recipe: post.recipe }
+    end
+    render json: posts
   end
 
   private
