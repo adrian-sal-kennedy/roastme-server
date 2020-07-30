@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   # users
 
   get '/user/:id', to: 'user#show'
+  get '/user' to: 'user#self'
 
   # authentication
 

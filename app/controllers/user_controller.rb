@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class UserController < ApplicationController
-  # before_action :check_existing, only: :create
+  before_action :authenticate_user, only: :self
+
   def create
     User.create(user_params)
     render json: 'user created'
@@ -10,6 +11,14 @@ class UserController < ApplicationController
   def show
     posts = []
     User.find(params[:id]).posts.each do |post|
+      posts << { post: post, author: post.user, recipe: post.recipe }
+    end
+    render json: posts
+  end
+
+  def self
+    posts = []
+    current_user.posts.each do |post|
       posts << { post: post, author: post.user, recipe: post.recipe }
     end
     render json: posts
