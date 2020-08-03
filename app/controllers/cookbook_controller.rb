@@ -6,7 +6,7 @@ class CookbookController < ApplicationController
   def index
     qparams = request.query_parameters
     list = []
-    recipes = current_user.recipes + current_user.favourite.recipes
+    recipes = current_user.recipes.joins(current_user.favourite.recipes)
 
     recipes = recipes.joins(:tags).where('tags.tag LIKE ?', qparams['tag']) if qparams['tag']
     if qparams['ingredient']
