@@ -17,7 +17,7 @@ class IngredientsController < ApplicationController
       recipe.recipes_ingredients.each(&:delete)
 
       # params.require(:ingredients).permit(:list)[:list].split(',').each do |name|
-      pp params.require(:ingredients).permit(list: [])[:list].each do |name|
+      params.require(:ingredients).permit(list: [])[:list].each do |name|
         ingredient = Ingredient.find_by(name: name) || Ingredient.create(name: name)
 
         recipe.recipes_ingredients.create(ingredient_id: ingredient.id)
