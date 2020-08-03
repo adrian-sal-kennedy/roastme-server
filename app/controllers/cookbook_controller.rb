@@ -9,6 +9,7 @@ class CookbookController < ApplicationController
     recipes.each do |recipe|
       temp << { recipe: recipe, author: recipe.user, tags: recipe.tags }
     end
+    pp temp
     render json: { list: temp, count: temp.length }
   end
 end
