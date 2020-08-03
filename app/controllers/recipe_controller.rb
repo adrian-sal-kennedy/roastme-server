@@ -46,7 +46,7 @@ class RecipeController < ApplicationController
     if new_recipe.save
       render json: { recipe: new_recipe.id, created: true }
     else
-      render json: { recipe: 'n/a', created: false }, :status 401
+      render json: { recipe: 'n/a', created: false }, status: 401
     end
   end
 
